@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @Slf4j
 public class LibraryEventsController {
-    @PostMapping
+    @PostMapping("/v1/libraryevent")
     public ResponseEntity<LibraryEvent> createNewBook(@RequestBody LibraryEvent libraryEvent) {
 
         log.info("libraryEvent : {} ",libraryEvent);
