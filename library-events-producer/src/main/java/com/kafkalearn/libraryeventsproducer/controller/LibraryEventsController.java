@@ -24,7 +24,7 @@ public class LibraryEventsController {
     public ResponseEntity<LibraryEvent> createNewBook(@RequestBody LibraryEvent libraryEvent) throws JsonProcessingException {
 
         log.info("libraryEvent : {} ",libraryEvent);
-        libraryEventsProducer.sendLibraryEvent(libraryEvent);
+        libraryEventsProducer.sendLibraryEventAsync(libraryEvent);
         return ResponseEntity.status(HttpStatus.CREATED).body(libraryEvent);
     }
 }
